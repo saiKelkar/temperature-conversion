@@ -1,0 +1,38 @@
+#include <iostream>
+
+double degreeF (double degreeC);
+
+int main(){
+    
+    double celsius {};
+    std::cout << "Enter the temperature in degree Celsius: ";
+    std::cin >> celsius;
+    //if celsius = 25
+
+    std::cout << "Conversion to degree Farenheit is: "<< degreeF(celsius)<< '\n';
+    //then output should be, degree farenheit = 77 
+    std::cout << "Average temperature range in Mumbai is between 18 - 35 degree Celsius\n";
+
+    //the comparison below is just for fun, to understand the temperature range
+    if (celsius < 18.00){
+        std::cout << "You entered temperature less than the average experienced in Mumbai\n";
+    }
+
+    else if (18.00 <= celsius <= 35.00){
+        std::cout << "You entered a temperature in the range of Mumbai's average temperature\n";
+    }
+
+    else{
+        std::cout << "You entered a temperature greater than the average experienced in Mumbai\n";
+    }
+
+    return 0;
+}
+
+double degreeF (double degreeC){ //to convert degree celsius to degree farenheit
+
+    double farenheit {};
+    farenheit = (degreeC * 9/5) + 32;
+
+    return farenheit;
+}
